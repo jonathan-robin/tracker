@@ -235,8 +235,8 @@ function Home(props){
             endCalendar={endCalendar} pause={pause} nbHours={nbHours} clickHandlerToday={clickHandlerToday} clickHandlerWeek={clickHandlerWeek} clickHandlerMonth={clickHandlerMonth} 
             clickHandlerSevenDays={clickHandlerSevenDays} clickHandlerThirtyDays={clickHandlerThirtyDays} HandlerClickMatiere={HandlerClickMatiere} HandlerClickProjet={HandlerClickProjet} 
             HandlerClickLangage={HandlerClickLangage} HandlerClickJeux={HandlerClickJeux} clickHandlerCalendar={clickHandlerCalendar} tagDomaine={tagDomaine} HandlerResetClick={HandlerResetClick}/>
-        </div>}
-    </div>
+            </div>}
+        </div>
     )
 }
 export default Home;

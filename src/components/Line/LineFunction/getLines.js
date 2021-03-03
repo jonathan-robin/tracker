@@ -4,16 +4,7 @@ global.jQuery = require('jquery');
 require('bootstrap');
 
 function getLines(sessions, leDomaine, lesDates){
-
-    var lesResultats = [];
-    var lesDatesRegroupes = [];
-    var lesDatesUniques=[];
-    var lesDatesString = [];
-    var lesDatesFinales = [];
-    var lesVraiesDatesFinales = [];
-
-    console.log(sessions)
-
+    var lesResultats, lesDatesRegroupes, lesDatesUniques, lesDatesString, lesDatesFinales, lesVraiesDatesFinales = [];
     try{
         for (var i =0; i < sessions.length; i ++){
             if (sessions[i].domaines == leDomaine){
@@ -84,7 +75,7 @@ function getLines(sessions, leDomaine, lesDates){
                                         DomainName:'none',
                                         domain:'none',
                                         objectif:'none',
-            };
+                                        };
             lesDatesFinales.map(element => {
                 if (element.date === lesDates[i]){
                     lesVraiesDatesFinales[i] = {element : element.duration,
@@ -93,18 +84,13 @@ function getLines(sessions, leDomaine, lesDates){
                                                 DomainName:element.DomainName,
                                                 domain:element.domain,
                                                 objectif:element.objectif
-                    };
-                    // {
-                    //     duration:element.duration,
-                    //     date:element.date
-                    // }
+                                                };
                 }
             })
         }
     }catch(error){
         console.log(error);
     }
-    console.log(lesVraiesDatesFinales)
     return lesVraiesDatesFinales;
 }
 export default getLines

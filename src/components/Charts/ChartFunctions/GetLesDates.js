@@ -13,7 +13,6 @@ function GetLesDates(Debut, Fin) {
             ok = false;
         }
     };
-    
     return lesJours;
 }
 export default GetLesDates;

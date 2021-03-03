@@ -2,9 +2,9 @@ function getLabel(lesSessions){
 
   var label=[];
   try{
-    lesSessions.map(element=>{
+    lesSessions.map(element=>{ 
         label.push("domaines");
-  });
+    });
   }catch(error){
     console.log(error);
   }
