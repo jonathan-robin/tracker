@@ -1,0 +1,471 @@
+
+.rechercheParDomaine{
+  display:flex; 
+  justify-content: space-evenly;
+  margin-top:2%;
+  padding-bottom: 8%;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.myCalendar{
+  display:flex;
+  justify-content: space-evenly;
+}
+.dates{
+  display:flex;
+  justify-content: space-evenly;
+}
+.rechercheRapideButton{
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.ligne1{
+  display:flex; 
+  justify-content:space-evenly;
+}
+.ligne2 {
+  display:flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+.RechercheRapide{
+  margin-top:2%;
+  background-color: #ff80006c;
+  padding:2%;
+  margin-left:2%;
+  margin-right:2%;
+  border-radius:30px;
+  border-color: #ff8000cc;
+}
+.myItem {
+  margin-top: 5vh;
+  background-color: #ff8000;
+  border: 1px solid black;
+  height: 17vh;
+  width:22vw;
+}
+.titleDates{
+  height:2.8vh;
+  width:20vw;
+  margin:auto;
+  background-color:rgb(173, 167, 167);
+  text-align: center;
+  position:relative;
+  color:black; 
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.9vh;
+  box-shadow: 0 15px 15px 0px black;
+}
+.divResultsCalendar{
+  position:relative;
+  margin:auto;
+  height:80vh;
+  margin-top: 3%;
+  width:58vw;
+  background-color: rgb(18, 138, 140, 0.50);
+  min-height: 80vh;
+  border-radius: 5%;
+  box-shadow: 0 15px 15px 0px black;
+}
+.myDatePicked{
+  margin-top: 8vh;
+  background-color: rgb(173, 167, 167);
+  border: 1px solid black;
+  height: 3.5vh;
+  width:22vw;
+  font-size:larger;
+  text-align: center;
+}
+.myTitle{
+  font-family:"Calibri";
+  color:orangered;
+  font-size:50px;
+  text-align:center;
+  padding-top: 3%;
+}
+html{
+  background-color:#fefee2;
+  
+}
+.rechercheDomaineTitle{
+  font-family:'Oswald';
+  font-size:4vh;
+}
+.rechercheRapideTitre{
+  font-family:'Oswald';
+  font-size:4vh;
+}
+.titreDomaine{
+  font-family: 'Calibri';
+}
+.calendrierTitre{
+  font-family:'Oswald';
+  font-size:4vh;
+}
+.titreTracker{
+  font-family:'Oswald' ;
+  font-weight: bolder;
+  font-size:15vh;
+  text-align: center;
+  margin-top: -10vh;
+}
+.myContainer{
+  padding-bottom:30vh;
+  background: rgb(41,197,199);
+  background: linear-gradient(97deg, rgba(41,197,199,0.2665441176470589) 0%, rgba(3,156,158,1) 100%);
+  min-height:auto;
+  max-height: fit-content;
+}
+.App-link {
+  color: #039c9e;
+}
+.Logo{
+  width:16vh;
+  height:16vh;
+  margin-left:2vw;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 2vh;
+}
+.calendrier{
+  margin-bottom:10vh;
+  margin-left:10vw;
+  margin-right:10vw;
+  background-color:  rgb(18, 136, 138);
+  border-radius:40px;
+  padding:2%;
+  max-height:10vh;
+  margin-top:15vh;
+  -webkit-transition: max-height 1s;
+	-moz-transition: max-height 1s;
+  transition: max-height 1s;
+  border:solid 0.1x black;
+  box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.RaccourciCalendarContent{
+  max-height:0vh;
+  overflow:hidden;
+  -webkit-transition: max-height 0.2s;
+	-moz-transition: max-height 0.2s;
+  transition: max-height 0.2s;
+  background-color:  rgba(18, 136, 138, 0.418);
+  border-radius: 10%;
+  position:absolute;
+  left:-20vw;
+  right:-20vw; 
+  align-items: center;
+  top:7vh;
+  z-index:0;
+}
+.RaccourciCalendar{
+  -webkit-transition: max-height 1s;
+	-moz-transition: max-height 1s;
+  transition: max-height 1s;
+  position:absolute; 
+  top:32vh;
+  left:62vw;
+}
+.RaccourciCalendar:hover .RaccourciCalendarContent{
+  max-height:80vh;
+  position:absolute;
+  left:-17vw;
+  right:-17vw; 
+  top:3vh;
+  background-color:  rgba(18, 136, 138, 0.7);
+  box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.2);
+  border:5px solid rgb(9, 99, 100);
+  z-index:10;
+}
+.RRDContent{
+  max-height:0vh;
+  overflow:hidden;
+  -webkit-transition: max-height 0.2s;
+	-moz-transition: max-height 0.2s;
+  transition: max-height 0.2s;
+  background-color:  rgba(18, 136, 138, 0.418);
+  border-radius: 10%;
+  position:absolute;
+  left:-10vw;
+  right:-10vw; 
+  top:7vh;
+  z-index:0;
+}
+.RaccourciRechercheDomaine{
+  position:absolute; 
+  top:32vh;
+  left:67vw;
+}
+.RaccourciRechercheDomaine:hover .RRDContent{
+  max-height:50vh;
+  position:absolute;
+  left:-10vw;
+  right:-10vw; 
+  top:3vh;
+  background-color:  rgba(18, 136, 138, 0.7);
+  box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.2);
+  border:5px solid rgb(9, 99, 100);
+  z-index:10;
+  overflow:visible
+}
+.raccourcis{
+  margin-top:10vh;
+}
+.tags{
+  float:right;
+  margin-top:-6%;
+  position:absolute;
+  width:fit-content;
+  left:67vw;
+  background-color:white;
+  border-radius:8%;
+  padding-left:1%;
+}
+.RRRContent{
+  max-height:0vh;
+  overflow:hidden;
+  -webkit-transition: max-height 0.2s;
+	-moz-transition: max-height 0.2s;
+  transition: max-height 0.2s;
+  background-color:  rgba(18, 136, 138, 0.418);
+  border-radius: 10%;
+  position:absolute;
+  left:-10vw;
+  right:-10vw;
+  align-items: center;
+  top:3vh;
+  z-index:0;
+}
+.RaccourciRechercheRapide{
+  -webkit-transition: max-height 1s;
+	-moz-transition: max-height 1s;
+  transition: max-height 1s;
+  position:absolute; 
+  top:32vh;
+  left:72vw;
+}
+.resultsDates{
+  font-family: 'lato';
+  text-align:center;
+  margin-top:-3vh;
+}
+.RaccourciRechercheRapide:hover .RRRContent{
+  max-height:50vh;
+  left:-10vw;
+  right:-10vw; 
+  top:3vh;
+  background-color:  rgba(18, 136, 138, 0.7);
+  box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.2);
+  border:5px solid rgb(9, 99, 100);
+  z-index:10;
+}
+.CalendrierContent{
+  max-height:0vh;
+  overflow:hidden;
+  -webkit-transition: max-height 1s;
+	-moz-transition: max-height 1s;
+	transition: max-height 1s;
+}
+.calendrier:hover{
+  max-height:52vh;
+}
+.calendrier:hover .CalendrierContent{
+  max-height:50vh;
+}
+.Logo:hover{
+  width:20vh;
+  height:20vh;
+  cursor:pointer;
+}
+.rechercheRapide{
+  margin-left:10vw;
+  margin-right:10vw;
+  margin-bottom:10vh;
+  overflow:hidden;
+  background-color:  rgb(18, 136, 138);
+  border-radius:40px;
+  padding:2%;
+  max-height:10vh;
+  -webkit-transition: max-height 1s;
+	-moz-transition: max-height 1s;
+  transition: max-height 1s;
+  border:solid 0.1x black;
+  box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.rechercheRapideContent{
+  margin-top:4%;
+  max-height:0vh;
+  overflow:hidden;
+  -webkit-transition: max-height 1s;
+	-moz-transition: max-height 1s;
+	transition: max-height 1s;
+}
+.rechercheRapide:hover{
+  max-height:52vh;
+}
+.rechercheRapide:hover .rechercheRapideContent{
+  max-height:50vh;
+}
+.rechercheDomaine{
+  margin-left:10vw;
+  margin-right:10vw;
+  margin-bottom:10vh;
+  overflow:hidden;
+  background-color:  rgb(18, 136, 138);
+  border-radius:40px;
+  padding:2%;
+  max-height:10vh;
+  -webkit-transition: max-height 1s;
+	-moz-transition: max-height 1s;
+  transition: max-height 1s;
+  border:solid 0.1x black;
+  box-shadow: 20px 20px 20px 10px rgba(0, 0, 0, 0.2);
+}
+.rechercheDomaineContent{
+  margin-top:4%;
+  justify-content: space-around;
+  display:flex;
+  height:fit-content;
+  -webkit-transition: max-height 1s;
+	-moz-transition: max-height 1s;
+	transition: max-height 1s;
+}
+.rechercheDomaine:hover{
+  max-height:52vh;
+  overflow:visible;
+}
+.rechercheDomaine:hover .rechercheDomaine{
+  max-height:50vh;
+}
+.Home{
+  margin-left:25vh;
+  margin-right: 25vh;
+}
+.rechercheParDomaine{
+  margin-top:5vh;
+}
+.RechercheRapide{
+  margin-top:4vh;
+}
+@keyframes rechercheDomaineHover {
+  from{
+    height:10vh
+  }
+  to{
+    height:20vh;
+  }
+}
+@keyframes rechercheDomaineNotHover {
+  from{
+    height:20vh;
+  }
+  to{
+    height:10vh;
+  }
+}
+@keyframes rechercheRapideHover {
+  from{
+    height:8vh
+  }
+  to{
+    height:32vh;
+  }
+}
+@keyframes rechercheRapideNotHover {
+  from{
+    height:32;
+  }
+  to{
+    height:5vh;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes growBubble{
+  0%{
+    height:0%;
+    width:0%;
+  }
+  100%{  
+    width:100%,
+  }
+}
+@keyframes growRight{
+  0%{
+    width:0%;
+  }
+  100%{  
+    width:100%,
+  }
+}
+@keyframes growUp{
+  0%{
+    height:0%;
+  }
+  100%{  
+    height:100%,
+  }
+}
+@-webkit-keyframes bubble-anim {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  20% {
+    -webkit-transform: scaleY(0.95) scaleX(1.05);
+    transform: scaleY(0.95) scaleX(1.05); }
+  48% {
+    -webkit-transform: scaleY(1.1) scaleX(0.9);
+    transform: scaleY(1.1) scaleX(0.9); }
+  68% {
+    -webkit-transform: scaleY(0.98) scaleX(1.02);
+    transform: scaleY(0.98) scaleX(1.02); }
+  80% {
+    -webkit-transform: scaleY(1.02) scaleX(0.98);
+    transform: scaleY(1.02) scaleX(0.98); }
+  97%, 100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+@keyframes bubble-anim {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  20% {
+    -webkit-transform: scaleY(0.97) scaleX(1.03);
+    transform: scaleY(0.97) scaleX(1.03); }
+  48% {
+    -webkit-transform: scaleY(1.03) scaleX(0.97);
+    transform: scaleY(1.03) scaleX(0.97); }
+  68% {
+    -webkit-transform: scaleY(0.97) scaleX(1.03);
+    transform: scaleY(0.97) scaleX(1.03); }
+  80% {
+    -webkit-transform: scaleY(1.03) scaleX(0.97);
+    transform: scaleY(1.03) scaleX(0.97); }
+  97%, 100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+   }
+.animation-target {
+  -webkit-animation: animation 2500ms linear both;
+  animation: animation 2500ms linear both;
+}
+   @keyframes bounce {
+     0%{
+       height:0%;
+       width:0%;
+     }
+    100%{
+    }
+   }
