@@ -1,5 +1,5 @@
-import React, {Component, useEffect, useState} from 'react';
-import {Bar, Line, Pie, Doughnut} from 'react-chartjs-2';
+import React, {useState} from 'react';
+import {Pie} from 'react-chartjs-2';
 
 function PieRegroupeComponent(props){
 

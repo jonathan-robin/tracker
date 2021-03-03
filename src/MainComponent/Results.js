@@ -126,7 +126,6 @@ function Results(props){
                     <RaccourciCalendar clickHandlerCalendar={props.clickHandlerCalendar}/>
                 </div>
             </div>
-
             <div className="divResultsCalendar">  
                 <div style={{marginLeft:'-12%', position:'sticky', top:'2vh' }}>
                     <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -155,30 +154,17 @@ function Results(props){
                         <h1 className='titreDomaine'>{props.tagDomaine}
                             <button type="button" class="btn" onClick={() => {props.HandlerResetClick(); dispatch({type:'all'})  }}>
                                 <img src={Delete} style={{width:'2.5vw', height:'4vh'}}/>
-                            </button></h1>
+                            </button>
+                        </h1>
                     </div> : null }
                 </div>
-                {affichage=='Chart' && !isRegroupe ? 
-                <ChartComponent CalculChartPie={CalculChartPie} lesDates={lesDates} />
-                : null }
-                {affichage=='Chart' && isRegroupe?
-                <RegrouperChartComponent regroupement={DataChartPieRegroupement} nbHours={nbHours}/>
-                : null}
-                {affichage == 'Pie' && !isRegroupe?
-                <PieComponent  test={CalculChartPie} lesDates={lesDates}/>
-                :null }
-                {affichage == 'Pie' && isRegroupe?
-                <PieRegroupeComponent regroupement={DataChartPieRegroupement} nbHours={nbHours}/>
-                :null }
-                {affichage == 'Line' ?
-                <RegrouperLineComponent projet={LineProjet} matiere={LineMatiere} langage={LineLangages} jeux={LineJeux} lesDates={lesDates}/>
-                :null}
-                {isRegroupe && affichage == 'Bulles' ?
-                <AfficheBulles bulles={BullesRegroupes}/>
-                : null }
-                {affichage == 'Bulles'  && !isRegroupe ?
-                <AfficheBulles bulles={calculBulles} />
-                : null}
+                {affichage=='Chart' && !isRegroupe ? <ChartComponent CalculChartPie={CalculChartPie} lesDates={lesDates} /> : null }
+                {affichage=='Chart' && isRegroupe? <RegrouperChartComponent regroupement={DataChartPieRegroupement} nbHours={nbHours}/> : null}
+                {affichage == 'Pie' && !isRegroupe? <PieComponent  test={CalculChartPie} lesDates={lesDates}/> :null }
+                {affichage == 'Pie' && isRegroupe? <PieRegroupeComponent regroupement={DataChartPieRegroupement} nbHours={nbHours}/> :null }
+                {affichage == 'Line' ? <RegrouperLineComponent projet={LineProjet} matiere={LineMatiere} langage={LineLangages} jeux={LineJeux} lesDates={lesDates}/> :null}
+                {isRegroupe && affichage == 'Bulles' ? <AfficheBulles bulles={BullesRegroupes}/> : null }
+                {affichage == 'Bulles'  && !isRegroupe ? <AfficheBulles bulles={calculBulles} /> : null}
             </div>
         </div>
     )

@@ -34,7 +34,6 @@ function CalculDataChart(lesSessions, lesDates){
                     keep = element.startingDay;
                 }
             };
-
             for(var j =0; j <= lesDates.length; j++){
                 if(keep === lesDates[j]){
                     const getIndex = (element) => element === keep;
@@ -48,7 +47,6 @@ function CalculDataChart(lesSessions, lesDates){
                     }
                 }
             };
-
             lesStack.push({
                 duration:lestack,
                 domaines:ledomaine,
@@ -95,7 +93,6 @@ function CalculDataChart(lesSessions, lesDates){
                     mesObjectifs += cap3[h] +","; 
                     mesDurations += cap5[h] + ",";
             };
-
             mesinfos.push({ duration:madata,
                             label:meslabels,
                             background:mesback,
@@ -105,7 +102,6 @@ function CalculDataChart(lesSessions, lesDates){
                             prettyduration:mesDurations
                             })
         };
-
         for (var i = 0; i < mesinfos.length; i ++){
             data.push({
                 data : mesinfos[i].duration,
@@ -117,7 +113,6 @@ function CalculDataChart(lesSessions, lesDates){
                 prettyduration:mesinfos[i].prettyduration
             })
         }
-
     }catch(error){
         console.log(error)
     }

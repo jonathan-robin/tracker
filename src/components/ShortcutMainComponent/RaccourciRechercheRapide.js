@@ -7,7 +7,6 @@ global.jQuery = require('jquery');
 require('bootstrap');
 
 function RechercheRapideRaccourci(props){
-
     const today1 = new Date(Date.now());
     const today2 = new Date(Date.now());
     const startWeek = props.startWeek;

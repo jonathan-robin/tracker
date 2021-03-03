@@ -1,7 +1,4 @@
-import { domain } from "process";
-
 function GetDataRechercheDomaine(idDomaine, matiere_session, projet_sessions, langage_sessions, jeux_sessions){
-
     var laDataToReturn = [];
 
     try{
@@ -13,7 +10,6 @@ function GetDataRechercheDomaine(idDomaine, matiere_session, projet_sessions, la
     }catch(error){
         console.log(error);
     }
-
     try{
         projet_sessions.map(element => {
             if(element.idProjet === idDomaine){
@@ -23,7 +19,6 @@ function GetDataRechercheDomaine(idDomaine, matiere_session, projet_sessions, la
     }catch(error){
         console.log(error);
     }
-
     try{
         langage_sessions.map(element => {
             if(element.idLangage === idDomaine){
@@ -33,7 +28,6 @@ function GetDataRechercheDomaine(idDomaine, matiere_session, projet_sessions, la
     }catch(error){
         console.log(error);
     }
-
     try{
         jeux_sessions.map(element => {
             if(element.idJeux === idDomaine){

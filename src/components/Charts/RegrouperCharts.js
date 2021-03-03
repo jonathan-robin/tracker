@@ -112,13 +112,14 @@ function RegrouperCharts(props){
                     left:'0%',
                     top:resultat.position+"%",
                     width:resultat.taille+'%',
-                    overflow:'hidden', }}>
-                    <p style={{
-                        textAlign: 'center',
-                        fontFamily:'Calibri',
-                        fontSize: resultat.taille*10+'%',
-                        textDecoration:' underline overline'+getOpacitedColor(resultat)+'',}}>
-                        {switchText(resultat)} - {Math.round(resultat.taille)}%</p>
+                    overflow:'hidden'}}>
+                        <p style={{
+                            textAlign: 'center',
+                            fontFamily:'Calibri',
+                            fontSize: resultat.taille*10+'%',
+                            textDecoration:' underline overline'+getOpacitedColor(resultat)+'',}}>
+                            {switchText(resultat)} - {Math.round(resultat.taille)}%
+                        </p>
                 </div>
             )
         })

@@ -1,16 +1,11 @@
 import getTaille from './getTaille';
 
 function GetDataRegroupement(resultats){
-
-    var TotalMatieres = 0;
-    var TotalLangages = 0;
-    var TotalJeux = 0; 
-    var TotalProjet = 0; 
+    var TotalMatieres,TotalLangages,TotalJeux,TotalProjet = 0;
     var jeux = 'Jeux';
     var matieres = 'matieres';
     var langages = 'langages';
     var projets = 'projets';
-    var regroupement = [];
 
     for (var i = 0; i < resultats.length; i++){
         if(resultats[i].domaines === jeux){
@@ -26,9 +21,7 @@ function GetDataRegroupement(resultats){
             TotalMatieres += getTaille(resultats[i].duration);
         }
     };
-
-    regroupement = {Jeux: TotalJeux, Projets:TotalProjet, Langages:TotalLangages, Matieres:TotalMatieres};
-
+    var regroupement = {Jeux: TotalJeux, Projets:TotalProjet, Langages:TotalLangages, Matieres:TotalMatieres};
     return regroupement;
 }
 export default GetDataRegroupement;

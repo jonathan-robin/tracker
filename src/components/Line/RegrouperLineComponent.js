@@ -7,9 +7,6 @@ function RegrouperLineComponent(props){
 
     useEffect(() => {
         setLineChartData({labels:props.lesDates,
-        //     props.projet.map(element => {
-        //     return element.DomainName + '\n' + element.ladureePretier + '\n' + element.objectif
-        // }),
             datasets:
             [
                 {   
@@ -145,98 +142,7 @@ function RegrouperLineComponent(props){
             ]    })
     }, [props])
 
-    const [LineChartData, setLineChartData] = useState({
-        // labels:props.lesDates,
-        // datasets:
-        // [
-        //     {   
-        //         data:props.projet.element,
-        //         label:'Projet',
-        //         fill: false,
-        //         lineTension: 0.1,
-        //         backgroundColor: 'rgba(75,192,192,0.4)',
-        //         borderColor: '#6897E8',
-        //         borderCapStyle: 'butt',
-        //         borderDash: [],
-        //         borderDashOffset: 0.0,
-        //         borderJoinStyle: 'miter',
-        //         pointBorderColor: '#195ED6',
-        //         pointBackgroundColor: '#6897E8',
-        //         pointBorderWidth: 1,
-        //         pointHoverRadius: 5,
-        //         pointHoverBackgroundColor: '#6897E8',
-        //         pointHoverBorderColor: 'rgba(220,220,220,1)',
-        //         pointHoverBorderWidth: 2,
-        //         pointRadius: 1,
-        //         pointHitRadius: 10,
-                
-        //     },
-        //     {
-        //         label:"Langage",
-        //         data:props.langage.element,
-        //         fill: false,
-        //         lineTension: 0.1,
-        //         backgroundColor: 'rgba(75,192,192,0.4)',
-        //         borderColor: '#E67260',
-        //         borderCapStyle: 'butt',
-        //         borderDash: [],
-        //         borderDashOffset: 0.0,
-        //         borderJoinStyle: 'miter',
-        //         pointBorderColor: '#C73923',
-        //         pointBackgroundColor: '#fff',
-        //         pointBorderWidth: 1,
-        //         pointHoverRadius: 5,
-        //         pointHoverBackgroundColor: '#C73923',
-        //         pointHoverBorderColor: 'rgba(220,220,220,1)',
-        //         pointHoverBorderWidth: 2,
-        //         pointRadius: 1,
-        //         pointHitRadius: 10,
-                
-        //     },
-        //     {
-        //         label:"Jeux",
-        //         data:props.jeux.element,
-        //         fill: false,
-        //         lineTension: 0.1,
-        //         backgroundColor: 'rgba(75,192,192,0.4)',
-        //         borderColor: '#D4E660',
-        //         borderCapStyle: 'butt',
-        //         borderDash: [],
-        //         borderDashOffset: 0.0,
-        //         borderJoinStyle: 'miter',
-        //         pointBorderColor: '#CBE80C',
-        //         pointBackgroundColor: '#fff',
-        //         pointBorderWidth: 1,
-        //         pointHoverRadius: 5,
-        //         pointHoverBackgroundColor: '#CBE80C',
-        //         pointHoverBorderColor: 'rgba(220,220,220,1)',
-        //         pointHoverBorderWidth: 2,
-        //         pointRadius: 1,
-        //         pointHitRadius: 10,
-        //     },
-        //     {
-        //         label:"Matiere",
-        //         data:props.matiere.element,  
-        //         fill: false,
-        //         lineTension: 0.1,
-        //         backgroundColor: 'rgba(75,192,192,0.4)',
-        //         borderColor: '#68E879',
-        //         borderCapStyle: 'butt',
-        //         borderDash: [],
-        //         borderDashOffset: 0.0,
-        //         borderJoinStyle: 'miter',
-        //         pointBorderColor: '#23C739',
-        //         pointBackgroundColor: '#fff',
-        //         pointBorderWidth: 1,
-        //         pointHoverRadius: 5,
-        //         pointHoverBackgroundColor: '#23C739',
-        //         pointHoverBorderColor: 'rgba(220,220,220,1)',
-        //         pointHoverBorderWidth: 2,
-        //         pointRadius: 1,
-        //         pointHitRadius: 10,
-        //     },
-        // ]    
-    });
+    const [LineChartData, setLineChartData] = useState();
 
     function datasetKeyPovider(){
         return Math.random();
