@@ -11,6 +11,7 @@ function RegrouperLineComponent(props){
             [
                 {   
                     data:props.projet.map(element => {
+                        console.log(element)
                         return element.element
                     }),
                     label:'Projet',
@@ -140,7 +141,7 @@ function RegrouperLineComponent(props){
                 },
     
             ]    })
-    }, [props])
+    },[])
 
     const [LineChartData, setLineChartData] = useState();
 

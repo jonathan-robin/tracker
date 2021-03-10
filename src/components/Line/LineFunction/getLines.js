@@ -4,7 +4,12 @@ global.jQuery = require('jquery');
 require('bootstrap');
 
 function getLines(sessions, leDomaine, lesDates){
-    var lesResultats, lesDatesRegroupes, lesDatesUniques, lesDatesString, lesDatesFinales, lesVraiesDatesFinales = [];
+    var lesResultats = [];
+    var lesDatesRegroupes = [];
+    var lesDatesUniques = [];
+    var lesDatesString = [];
+    var lesDatesFinales = [];
+    var lesVraiesDatesFinales = [];
     try{
         for (var i =0; i < sessions.length; i ++){
             if (sessions[i].domaines == leDomaine){
