@@ -40,13 +40,12 @@ function CalculBullesRegroupes(data){
                 laBulle.y = y;
                 if(laBulle.x + (laBulle.r) <= 100){
                     if(laBulle.y + (laBulle.r) <= 100){                 
-                        lesdataToReturnpoils.push({
+                        dataToReturn.push({
                             x:laBulle.x,
                             y:laBulle.y,
                             r:laBulle.r,
                             nom:element.nom,
                             domaines:element.domaines
-            
                         })       
                     }   
                 } 

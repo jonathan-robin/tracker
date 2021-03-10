@@ -3,6 +3,7 @@ import {Bar, Line, Pie} from 'react-chartjs-2';
 
 function RegrouperChartComponent(props){
 
+    console.log(props);
     const [chartData, setChartData ]= useState({
         datasets:
             [{

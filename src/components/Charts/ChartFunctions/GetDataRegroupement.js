@@ -1,7 +1,10 @@
 import getTaille from './getTaille';
 
 function GetDataRegroupement(resultats){
-    var TotalMatieres,TotalLangages,TotalJeux,TotalProjet = 0;
+    var TotalMatieres = 0;
+    var TotalLangages = 0; 
+    var TotalJeux = 0; 
+    var TotalProjet = 0;
     var jeux = 'Jeux';
     var matieres = 'matieres';
     var langages = 'langages';
